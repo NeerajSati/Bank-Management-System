@@ -1,0 +1,9 @@
+
+.tableBtn{
+    padding: 6px;
+    padding-right: 12px;
+    padding-left: 12px;
+    background-color: rgba(0, 0, 71, 0.89);
+    border-radius: 10px;
+    color: white;
+}
