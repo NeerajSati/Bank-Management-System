@@ -28,6 +28,19 @@ router.put("/:id",async(req,res)=>{
         res.status(500).json(err);
     }
 })
+router.put("/add/:id",async(req,res)=>{
+    try{
+        const user = await User.findById(req.params.id);
+        const updatedUser = await User.findByIdAndUpdate(req.params.id,{
+            $set: {
+                balance: (+user.balance + +req.body.balance)
+            }
+        },{new:true})
+        res.status(200).json(updatedUser);
+    }catch(err){
+        res.status(500).json(err);
+    }
+})
 
 
 router.get("/:id",async(req,res)=>{
