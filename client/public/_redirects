@@ -1,0 +1,2 @@
+/api/*  https://bank-manage-ment-system.herokuapp.com/api/:splat 200
+/* /index.html 200
