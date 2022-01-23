@@ -7,7 +7,7 @@ function History() {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await axios.get("/transaction/all");
-      setHistory(res.data);
+      setHistory((res.data).reverse());
     };
     fetchPosts();
   }, []);
@@ -22,7 +22,7 @@ function History() {
             <th>Reciever</th>
             <th>Amount</th>
           </tr>
-          {history && history.reverse().map((frag) => (
+          {history && history.map((frag) => (
             <tr>
               <td>{frag.createdAt.split('T')[0]}</td>
               <td>{frag.sender}</td>
