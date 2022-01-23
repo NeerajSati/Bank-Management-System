@@ -1,7 +1,7 @@
 import './transact.css';
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import axios from "../axiosInstance";
 
 function Transact() {
   const [transact, setTransact] = useState([]);

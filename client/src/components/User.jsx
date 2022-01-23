@@ -1,6 +1,6 @@
 import "./user.css";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import axios from "../axiosInstance";
 import { useParams } from "react-router-dom";
 
 function User() {
