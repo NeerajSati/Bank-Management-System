@@ -22,7 +22,7 @@ function History() {
             <th>Reciever</th>
             <th>Amount</th>
           </tr>
-          {history && history.map((frag) => (
+          {history && history.reverse().map((frag) => (
             <tr>
               <td>{frag.createdAt.split('T')[0]}</td>
               <td>{frag.sender}</td>
